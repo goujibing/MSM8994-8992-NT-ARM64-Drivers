@@ -79,15 +79,12 @@ Cityman:
 
 Talkman:
 
-- GPU and display
 - Iris biometric sensor (missing drivers)
 - Cameras (missing drivers)
 - Any kind of sensor (except ALS)
 - USB VBus (USB will work with externally provided power source)
-- Audio
-- Microphones
 - Vibration motor
-- WLAN (requires UEFI PCIe bring up)
+- WLAN (requires UEFI PCIe bring up and UART/PEP)
 - HDMI out via USB-C
 - Cellular (Desktop doesn't have a RIL stack and is missing EMB)
 
