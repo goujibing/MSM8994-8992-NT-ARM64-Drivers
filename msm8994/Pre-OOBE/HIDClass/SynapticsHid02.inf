@@ -8,6 +8,7 @@ ClassGuid   = {745A17A0-74D3-11D0-B6FE-00A0C90F57DA}
 Provider    = %VENDOR%
 DriverVer   = 05/13/2016,21.30.10.0097
 CatalogFile = SynapticsHid02.cat
+BootCritical= 1
  
 [Manufacturer]
 %VENDOR%=MSFT, NTARM64
