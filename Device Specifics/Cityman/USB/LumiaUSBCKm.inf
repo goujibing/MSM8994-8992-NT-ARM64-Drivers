@@ -9,7 +9,6 @@ ClassGuid   = {36FC9E60-C465-11CF-8056-444553540000}
 Provider    = %ManufacturerName%
 CatalogFile = LumiaUSBCKm.cat
 DriverVer   = 06/27/2018,18.36.44.231
-BootCritical= 1
 
 [DestinationDirs]
 DefaultDestDir = 12

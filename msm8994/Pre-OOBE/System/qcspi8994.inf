@@ -10,7 +10,6 @@ Provider    = %Manufacturer_Name%
 DriverVer   = 07/02/2015,1.0.1067.0000
 CatalogFile = qcspi8994.cat
 PnpLockDown = 1
-BootCritical= 1
 
 [SourceDisksNames]
 1 = %Disk_Description%

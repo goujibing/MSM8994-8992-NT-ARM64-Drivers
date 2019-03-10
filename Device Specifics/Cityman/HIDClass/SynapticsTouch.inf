@@ -7,9 +7,8 @@ Signature   = "$WINDOWS NT$"
 Class       = HIDClass
 ClassGUID   = {745A17A0-74D3-11D0-B6FE-00A0C90F57DA}
 Provider    = %Provider_Name%
-DriverVer = 08/04/2018,20.42.12.425
+DriverVer   = 08/04/2018,20.42.12.425
 CatalogFile = SynapticsTouch.cat
-BootCritical= 1
 
 [DestinationDirs]
 DefaultDestDir = 12

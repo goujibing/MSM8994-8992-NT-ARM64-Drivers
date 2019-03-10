@@ -11,39 +11,38 @@
 ;    INX file for Qualcomm Sound Model Library
 ;
 [Version]
-Signature = "$Windows NT$"
-Class=SYSTEM
-ClassGUID={4d36e97d-e325-11ce-bfc1-08002be10318}
-Provider=%QC%
-DriverVer=03/02/2012,0.0.0000.0
-CatalogFile="QCListenSoundModel.cat"
-BootCritical= 1
+Signature   = "$Windows NT$"
+Class       = SYSTEM
+ClassGUID   = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider    = %QC%
+DriverVer   = 03/02/2012,0.0.0000.0
+CatalogFile = "QCListenSoundModel.cat"
 
 [DestinationDirs]
-QCListenSoundModel.Files = 11 ; \system32 directory on Windows 2000 and later versions
+QCListenSoundModel.Files        = 11 ; \system32 directory on Windows 2000 and later versions
 VoiceActivationenUSConfig.Files = 11,\VoiceActivationModels\en-US
-VoiceActivationenUSBin.Files = 11,\VoiceActivationModels\en-US
+VoiceActivationenUSBin.Files    = 11,\VoiceActivationModels\en-US
 VoiceActivationenGBConfig.Files = 11,\VoiceActivationModels\en-GB
-VoiceActivationenGBBin.Files = 11,\VoiceActivationModels\en-GB
+VoiceActivationenGBBin.Files    = 11,\VoiceActivationModels\en-GB
 VoiceActivationzhCNConfig.Files = 11,\VoiceActivationModels\zh-CN
-VoiceActivationzhCNBin.Files = 11,\VoiceActivationModels\zh-CN
+VoiceActivationzhCNBin.Files    = 11,\VoiceActivationModels\zh-CN
 
 VoiceActivationdeDEConfig.Files = 11,\VoiceActivationModels\de-DE
-VoiceActivationdeDEBin.Files = 11,\VoiceActivationModels\de-DE
+VoiceActivationdeDEBin.Files    = 11,\VoiceActivationModels\de-DE
 VoiceActivationenAUConfig.Files = 11,\VoiceActivationModels\en-AU
-VoiceActivationenAUBin.Files = 11,\VoiceActivationModels\en-AU
+VoiceActivationenAUBin.Files    = 11,\VoiceActivationModels\en-AU
 VoiceActivationenCAConfig.Files = 11,\VoiceActivationModels\en-CA
-VoiceActivationenCABin.Files = 11,\VoiceActivationModels\en-CA
+VoiceActivationenCABin.Files    = 11,\VoiceActivationModels\en-CA
 VoiceActivationenINConfig.Files = 11,\VoiceActivationModels\en-IN
-VoiceActivationenINBin.Files = 11,\VoiceActivationModels\en-IN
+VoiceActivationenINBin.Files    = 11,\VoiceActivationModels\en-IN
 VoiceActivationesESConfig.Files = 11,\VoiceActivationModels\es-ES
-VoiceActivationesESBin.Files = 11,\VoiceActivationModels\es-ES
+VoiceActivationesESBin.Files    = 11,\VoiceActivationModels\es-ES
 VoiceActivationfrFRConfig.Files = 11,\VoiceActivationModels\fr-FR
-VoiceActivationfrFRBin.Files = 11,\VoiceActivationModels\fr-FR
+VoiceActivationfrFRBin.Files    = 11,\VoiceActivationModels\fr-FR
 VoiceActivationitITConfig.Files = 11,\VoiceActivationModels\it-IT
-VoiceActivationitITBin.Files = 11,\VoiceActivationModels\it-IT
+VoiceActivationitITBin.Files    = 11,\VoiceActivationModels\it-IT
 VoiceActivationjaJPConfig.Files = 11,\VoiceActivationModels\ja-JP
-VoiceActivationjaJPBin.Files = 11,\VoiceActivationModels\ja-JP
+VoiceActivationjaJPBin.Files    = 11,\VoiceActivationModels\ja-JP
 
 [SourceDisksNames]
 0=%Disk%

@@ -21,7 +21,6 @@ Provider    = %QC%
 DriverVer   = 07/02/2015,1.0.1067.0000
 CatalogFile = qccamrearsensor_imx214_13m_bayer8994.cat
 PnpLockDown = 1
-BootCritical= 1
 
 [DestinationDirs]
 Drivers_Dir = 12

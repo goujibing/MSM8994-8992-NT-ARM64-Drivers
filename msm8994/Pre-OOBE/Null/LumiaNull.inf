@@ -9,7 +9,6 @@ ClassGuid   = {84bcdf85-adb1-420a-a40f-cd71df4b0ccd}
 Provider    = %ManufacturerName%
 CatalogFile = LumiaNull.cat
 DriverVer   = 10/06/2018,18.13.19.793
-BootCritical= 1
 
 [DestinationDirs]
 DefaultDestDir                         = 12

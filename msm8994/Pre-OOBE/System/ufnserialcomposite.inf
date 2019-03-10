@@ -23,7 +23,6 @@ Provider    = %QCOM%
 CatalogFile = QCComposite.cat
 DriverVer   = 07/02/2015,1.0.1067.0000
 PnpLockDown = 1
-BootCritical= 1
 
 [DestinationDirs]
 DefaultDestDir = 12
