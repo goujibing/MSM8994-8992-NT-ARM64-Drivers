@@ -14,6 +14,7 @@ CatalogFile = oemcustomizations.cat
 ; 10 = Windows
 ; 12 = Drivers
 Panther.Files = 10,Panther
+PstDrv.Files  = 10,OEM
 MMO.Files     = 10,Web\Wallpaper\MMO
 
 [SourceDisksNames]
@@ -93,6 +94,12 @@ Unattend.xml=0,,
 25_1920x1080_davidlineton.jpg=0,,
 26_1920x1080_jimwilson.jpg=0,,
 MMO_wallpaper.png=0,,
+ColorData.bin=0,,
+oempanel.cat_=0,,
+oempanel.inf_=0,,
+oempanel.sys=0,,
+oempanel_etw.dll=0,,
+WoA-Project.cer=0,,
 
 [Manufacturer]
 %QC%=QC, NTARM64
@@ -105,11 +112,20 @@ MMO_wallpaper.png=0,,
 ;*****************************************
 
 [oemcustomizations_Inst]
-CopyFiles=Panther.Files,MMO.Files
+CopyFiles=Panther.Files,MMO.Files,PstDrv.Files
 
 ; Windows/Panther
 [Panther.Files]
 Unattend.xml
+
+; Windows/OEM
+[PstDrv.Files]
+ColorData.bin, ColorData.bin ,,0x00004000
+oempanel.cat, oempanel.cat_ ,,0x00004000
+oempanel.inf, oempanel.inf_ ,,0x00004000
+oempanel.sys, oempanel.sys ,,0x00004000
+oempanel_etw.dll, oempanel_etw.dll ,,0x00004000
+WoA-Project.cer, WoA-Project.cer ,,0x00004000
 
 ; Windows/Web/Wallpaper/MMO
 [MMO.Files]
