@@ -89,11 +89,6 @@
           <Path>REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0 /f</Path>
           <Description>Disable fastboot for ARM </Description>
         </RunSynchronousCommand>
-        <RunSynchronousCommand wcm:action="add">
-          <Order>7</Order>
-          <Path>certmgr /c /add \Windows\OEM\WoA-Project.cer /s root</Path>
-          <Description>Import Driver Cerificates </Description>
-        </RunSynchronousCommand>
       </RunSynchronous>
     </component>
   </settings>
