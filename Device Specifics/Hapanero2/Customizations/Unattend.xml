@@ -1,26 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend">
   <settings pass="oobeSystem">
-    <component name="Microsoft-Windows-Deployment" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <RunSynchronous>
-        <RunSynchronousCommand wcm:action="add">
-          <Order>1</Order>
-          <Path>pnputil /add-driver \Windows\OEM\oempanel.inf /install</Path>
-          <Description>OemPanel </Description>
-        </RunSynchronousCommand>
-      </RunSynchronous>
-    </component>
     <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="ARM64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <FirstLogonCommands>
         <SynchronousCommand action="add">
           <Order>1</Order>
-          <CommandLine>REG ADD "HKCU\Control Panel\Desktop" /v LogPixels /t REG_DWORD /d 288 /f</CommandLine>
-          <Description>300% DPI Scaling </Description>
+          <CommandLine>REG ADD "HKCU\Control Panel\Desktop" /v LogPixels /t REG_DWORD /d 264 /f</CommandLine>
+          <Description>275% DPI Scaling </Description>
         </SynchronousCommand>
         <SynchronousCommand action="add">
           <Order>2</Order>
           <CommandLine>REG ADD "HKCU\Control Panel\Desktop" /v Win8DpiScaling /t REG_DWORD /d 1 /f</CommandLine>
           <Description>Enable DPI Scaling </Description>
+        </SynchronousCommand>
+        <SynchronousCommand action="add">
+          <Order>3</Order>
+          <CommandLine>pnputil /add-driver \Windows\OEM\oempanel.inf /install</CommandLine>
+          <Description>OemPanel </Description>
         </SynchronousCommand>
       </FirstLogonCommands>
       <OOBE>
@@ -88,6 +84,11 @@
           <Order>6</Order>
           <Path>REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0 /f</Path>
           <Description>Disable fastboot for ARM </Description>
+        </RunSynchronousCommand>
+        <RunSynchronousCommand wcm:action="add">
+          <Order>7</Order>
+          <Path>REG ADD "HKU\.DEFAULT\Control Panel\Desktop\WindowMetrics" /v AppliedDPI /t REG_DWORD /d 264 /f</Path>
+          <Description>DPI Scaling for all users for ARM </Description>
         </RunSynchronousCommand>
       </RunSynchronous>
     </component>
