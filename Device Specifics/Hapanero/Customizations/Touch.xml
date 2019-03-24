@@ -41,11 +41,7 @@
   <Actions>
     <Exec>
       <Command>powershell.exe</Command>
-      <Arguments>-ExecutionPolicy Bypass -NoLogo -WindowStyle Hidden -command "Disable-PnpDevice -InstanceId 'HID\MSHW1003&amp;COL01\3&amp;210688DB&amp;0&amp;0000' -Confirm:$false"</Arguments>
-    </Exec>
-    <Exec>
-      <Command>powershell.exe</Command>
-      <Arguments>-ExecutionPolicy Bypass -NoLogo -WindowStyle Hidden -command "Enable-PnpDevice -InstanceId 'HID\MSHW1003&amp;COL01\3&amp;210688DB&amp;0&amp;0000' -Confirm:$false"</Arguments>
-    </Exec>
+      <Arguments>-ExecutionPolicy Bypass -NoLogo -WindowStyle Hidden -command "Disable-PnpDevice -InstanceId 'HID\MSHW1003&amp;COL01\3&amp;210688DB&amp;0&amp;0000' -Confirm:$false;Enable-PnpDevice -InstanceId 'HID\MSHW1003&amp;COL01\3&amp;210688DB&amp;0&amp;0000' -Confirm:$false"</Arguments>
+    </Exec>q
   </Actions>
 </Task>
