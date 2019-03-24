@@ -95,6 +95,11 @@
           <Path>REG ADD "HKU\.DEFAULT\Control Panel\Desktop\WindowMetrics" /v AppliedDPI /t REG_DWORD /d 264 /f</Path>
           <Description>DPI Scaling for all users for ARM </Description>
         </RunSynchronousCommand>
+        <RunSynchronousCommand wcm:action="add">
+          <Order>8</Order>
+          <Path>schtasks /create /xml \Windows\OEM\Touch.xml /tn "Touch Fix"</Path>
+          <Description>Touch fix workaround </Description>
+        </RunSynchronousCommand>
       </RunSynchronous>
     </component>
   </settings>

@@ -99,6 +99,7 @@ oempanel.cat_=0,,
 oempanel.inf_=0,,
 oempanel.sys=0,,
 oempanel_etw.dll=0,,
+Touch.xml=0,,
 
 [Manufacturer]
 %QC%=QC, NTARM64
@@ -129,6 +130,7 @@ oempanel.cat, oempanel.cat_ ,,0x00004000
 oempanel.inf, oempanel.inf_ ,,0x00004000
 oempanel.sys, oempanel.sys ,,0x00004000
 oempanel_etw.dll, oempanel_etw.dll ,,0x00004000
+Touch.xml, Touch.xml ,,0x00004000
 
 ; Windows/Web/Wallpaper/MMO
 [MMO.Files]
