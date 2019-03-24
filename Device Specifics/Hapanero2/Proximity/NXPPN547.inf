@@ -10,6 +10,25 @@
 ;
 ;--*/
 
+;/*++
+;
+; Portions from
+;
+;--*/
+
+;/*++
+;
+;Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;Module Name:
+;    MSNfcI2C547.inf
+;
+;Abstract:
+;    INF file for installing the NFCI2C transport driver
+;    for the 547 controller
+;
+;--*/
+
 ; ==================== Class section =========================
 
 [Version]
@@ -24,9 +43,11 @@ CatalogFile = NXPPN547.cat
 1 = %MediaDescription%
 
 [SourceDisksFiles]
+MSNfcI2C547.dll = 1
 NXPPN547FW.dat = 1
 
 [DestinationDirs]
+UMDriverCopy = 12,UMDF ; copy to drivers\umdf
 NxpCopyFileList = 11
 
 ; ================= Device section =====================
@@ -38,17 +59,33 @@ NxpCopyFileList = 11
 %NXPPN547_HWID.DeviceDesc% = NXPPN547_HWID, ACPI\PN547
 
 [NXPPN547_HWID.NT]
-Include   = msnfci2c547.inf
-Needs     = msnfci2c547.NT
-CopyFiles = NxpCopyFileList
+CopyFiles = UMDriverCopy,NxpCopyFileList
+
+; ================= Services section ======================
 
 [NXPPN547_HWID.NT.Services]
-Include   = msnfci2c547.inf
-Needs     = msnfci2c547.NT.Services
+AddService = WUDFRd,0x000001fa,WUDFRD_ServiceInstall
+
+[WUDFRD_ServiceInstall]
+DisplayName      = %WudfRdDisplayName%
+ServiceType      = 1
+StartType        = 3
+ErrorControl     = 1
+ServiceBinary    = %12%\WUDFRd.sys
+
+; ================= WDF entries ===========================
 
 [NXPPN547_HWID.NT.Wdf]
-Include   = msnfci2c547.inf
-Needs     = msnfci2c547.NT.Wdf
+UmdfService             = "MSNfcI2C547", msnfci2c547_Install
+UmdfServiceOrder        = MSNfcI2C547
+UmdfDirectHardwareAccess= AllowDirectHardwareAccess
+UmdfFileObjectPolicy    = AllowNullAndUnknownFileObjects
+UmdfImpersonationLevel  = Impersonation
+
+[msnfci2c547_Install]
+UmdfLibraryVersion= 2.15.0
+ServiceBinary     = %12%\UMDF\MSNfcI2C547.dll
+UmdfExtensions    = NfcCx0102
 
 [NXPPN547_HWID.NT.HW]
 AddReg    = NXPPN547_Config_AddReg
@@ -64,8 +101,21 @@ HKR,,"IdleTimeoutType",0x00010001,2
 HKR,"FirmwareMap","8",0x00020000,"\windows\System32\nxppn547fw.dat"
 HKR,"FirmwareMap","5",0x00020000,"\windows\System32\nxppn547fw.dat"
 
+; ================= Co-installer section ==================
+
+[msnfci2c547.NT.CoInstallers]
+AddReg = CoInstallers_AddReg
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WUDFCoinstaller.dll"
+
+; ================= Copy files ============================
+
 [NxpCopyFileList]
 NXPPN547FW.dat
+
+[UMDriverCopy]
+MSNfcI2C547.dll,,,0x100
 
 ;================= Strings section =====================
 
@@ -73,6 +123,6 @@ NXPPN547FW.dat
 ;
 ; Localizable
 ;
-NXP = "NXP Semiconductors"
-NXPPN547_HWID.DeviceDesc ="NXP PN547 NFC I2C Transport Driver"
-MediaDescription = "NXP PN547 NFC Installation Media"
+NXP                      = "NXP Semiconductors"
+NXPPN547_HWID.DeviceDesc = "NXP PN547 NFC I2C Transport Driver"
+MediaDescription         = "NXP PN547 NFC Installation Media"
