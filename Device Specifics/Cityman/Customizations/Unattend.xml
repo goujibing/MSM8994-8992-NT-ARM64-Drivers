@@ -13,16 +13,6 @@
           <CommandLine>REG ADD "HKCU\Control Panel\Desktop" /v Win8DpiScaling /t REG_DWORD /d 1 /f</CommandLine>
           <Description>Enable DPI Scaling </Description>
         </SynchronousCommand>
-        <SynchronousCommand action="add">
-          <Order>3</Order>
-          <CommandLine>pnputil /add-driver \Windows\OEM\oempanel.inf /install</CommandLine>
-          <Description>OemPanel </Description>
-        </SynchronousCommand>
-        <SynchronousCommand action="add">
-          <Order>4</Order>
-          <CommandLine>pnputil /add-driver \Windows\OEM\ChargeArbitration.inf /install</CommandLine>
-          <Description>CAD </Description>
-        </SynchronousCommand>
       </FirstLogonCommands>
       <OOBE>
         <HideWirelessSetupInOOBE>false</HideWirelessSetupInOOBE>
@@ -99,6 +89,16 @@
           <Order>8</Order>
           <Path>schtasks /create /xml \Windows\OEM\Touch.xml /tn "Touch Fix"</Path>
           <Description>Touch fix workaround </Description>
+        </RunSynchronousCommand>
+        <RunSynchronousCommand wcm:action="add">
+          <Order>9</Order>
+          <Path>pnputil /add-driver \Windows\OEM\oempanel.inf /install</Path>
+          <Description>OemPanel </Description>
+        </RunSynchronousCommand>
+        <RunSynchronousCommand wcm:action="add">
+          <Order>10</Order>
+          <Path>pnputil /add-driver \Windows\OEM\ChargeArbitration.inf /install</Path>
+          <Description>CAD</Description>
         </RunSynchronousCommand>
       </RunSynchronous>
     </component>
