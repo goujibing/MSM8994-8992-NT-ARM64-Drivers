@@ -1,4 +1,4 @@
-﻿;
+;
 ; phonent.inf
 ;
 
@@ -15,34 +15,35 @@ CatalogFile = phonent.cat
 Workaround.Files = 10
 
 [SourceDisksNames]
-0=%DiskId1%
+0 = %DiskId1%
 
 [SourceDisksFiles]
 
 [Manufacturer]
-%QC%=QC, NTARM64
+%QC% = QC, NTARM64
 
 [QC.NTARM64]
-"phonent" = phonent_Inst, 
+"phonent" = phonent_Inst,
 
 ;*****************************************
 ; phonent  Install Section
 ;*****************************************
 
 [phonent_Inst]
-CopyFiles=Workaround.Files
-Addreg=phonentReg
+CopyFiles = Workaround.Files
+Addreg    = phonentReg
 
 ; System32
 [Workaround.Files]
 
 [phonentReg]
-HKLM, "SYSTEM\ControlSet001\Control\ProductOptions", "AnotherSuite", 0x00010000, "PhoneNT"
+HKLM, "SYSTEM\ControlSet001\Control\ProductOptions", "AnotherSuite", 0x00010000,  "PhoneNT"
 
 [Strings]
-REG_SZ=0x00000000
-SPSVCINST_ASSOCSERVICE= 0x00000002
-QCOM                  = "Qualcomm"
-QC                    = "Qualcomm Technologies, INC"
-DiskId1               = "phonent Installation Disk #1"
-TUNINGDATA.DeviceDesc = "phonent settings Package"
+REG_SZ                 = 0x00000000
+SPSVCINST_ASSOCSERVICE = 0x00000002
+QCOM                   = "Qualcomm"
+QC                     = "Qualcomm Technologies, INC"
+DiskId1                = "phonent Installation Disk #1"
+TUNINGDATA.DeviceDesc  = "phonent settings Package"
+
