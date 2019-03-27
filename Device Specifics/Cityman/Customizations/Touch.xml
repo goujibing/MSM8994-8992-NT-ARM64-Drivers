@@ -10,25 +10,6 @@
     <BootTrigger>
       <Enabled>true</Enabled>
     </BootTrigger>
-    <LogonTrigger>
-      <Enabled>true</Enabled>
-    </LogonTrigger>
-    <SessionStateChangeTrigger>
-      <Enabled>true</Enabled>
-      <StateChange>SessionLock</StateChange>
-    </SessionStateChangeTrigger>
-    <SessionStateChangeTrigger>
-      <Enabled>true</Enabled>
-      <StateChange>SessionUnlock</StateChange>
-    </SessionStateChangeTrigger>
-    <SessionStateChangeTrigger>
-      <Enabled>true</Enabled>
-      <StateChange>RemoteConnect</StateChange>
-    </SessionStateChangeTrigger>
-    <SessionStateChangeTrigger>
-      <Enabled>true</Enabled>
-      <StateChange>RemoteDisconnect</StateChange>
-    </SessionStateChangeTrigger>
   </Triggers>
   <Principals>
     <Principal id="Author">
