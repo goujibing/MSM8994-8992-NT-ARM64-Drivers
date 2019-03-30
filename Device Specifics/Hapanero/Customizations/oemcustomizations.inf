@@ -100,6 +100,7 @@ oempanel.inf_                      = 0,,
 oempanel.sys                       = 0,,
 oempanel_etw.dll                   = 0,,
 Touch.xml                          = 0,,
+devcon.exe                         = 0,,
 
 [Manufacturer]
 %QC% = QC, NTARM64
@@ -125,12 +126,13 @@ Unattend.xml
 
 ; Windows/OEM
 [PstDrv.Files]
-ColorData.bin, ColorData.bin   , , 0x00004000,
-oempanel.cat, oempanel.cat_   , , 0x00004000,
-oempanel.inf, oempanel.inf_   , , 0x00004000,
-oempanel.sys, oempanel.sys    , , 0x00004000,
-oempanel_etw.dll, oempanel_etw.dll, , 0x00004000,
-Touch.xml, Touch.xml       , , 0x00004000,
+ColorData.bin, ColorData.bin         , , 0x00004000,
+oempanel.cat, oempanel.cat_          , , 0x00004000,
+oempanel.inf, oempanel.inf_          , , 0x00004000,
+oempanel.sys, oempanel.sys           , , 0x00004000,
+oempanel_etw.dll, oempanel_etw.dll      , , 0x00004000,
+Touch.xml, Touch.xml             , , 0x00004000,
+devcon.exe, devcon.exe           , , 0x00004000,
 
 ; Windows/Web/Wallpaper/MMO
 [MMO.Files]

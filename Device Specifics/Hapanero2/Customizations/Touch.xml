@@ -54,13 +54,13 @@
     <DisallowStartOnRemoteAppSession>false</DisallowStartOnRemoteAppSession>
     <UseUnifiedSchedulingEngine>true</UseUnifiedSchedulingEngine>
     <WakeToRun>false</WakeToRun>
-    <ExecutionTimeLimit>PT0S</ExecutionTimeLimit>
+    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>
     <Priority>7</Priority>
   </Settings>
   <Actions Context="Author">
     <Exec>
-      <Command>powershell.exe</Command>
-      <Arguments>-ExecutionPolicy Bypass -NoLogo -WindowStyle Hidden -command "Disable-PnpDevice -InstanceId 'HID\MSHW1003&amp;COL01\3&amp;210688DB&amp;0&amp;0000' -Confirm:$false;Enable-PnpDevice -InstanceId 'HID\MSHW1003&amp;COL01\3&amp;210688DB&amp;0&amp;0000' -Confirm:$false"</Arguments>
+      <Command>\Windows\OEM\devcon.exe</Command>
+      <Arguments>restart ACPI\MSHW1003</Arguments>
     </Exec>
   </Actions>
 </Task>
