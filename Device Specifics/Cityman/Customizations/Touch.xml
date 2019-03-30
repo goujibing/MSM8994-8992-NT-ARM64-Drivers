@@ -10,6 +10,25 @@
     <BootTrigger>
       <Enabled>true</Enabled>
     </BootTrigger>
+    <LogonTrigger>
+      <Enabled>true</Enabled>
+    </LogonTrigger>
+    <SessionStateChangeTrigger>
+      <Enabled>true</Enabled>
+      <StateChange>SessionLock</StateChange>
+    </SessionStateChangeTrigger>
+    <SessionStateChangeTrigger>
+      <Enabled>true</Enabled>
+      <StateChange>SessionUnlock</StateChange>
+    </SessionStateChangeTrigger>
+    <SessionStateChangeTrigger>
+      <Enabled>true</Enabled>
+      <StateChange>RemoteConnect</StateChange>
+    </SessionStateChangeTrigger>
+    <SessionStateChangeTrigger>
+      <Enabled>true</Enabled>
+      <StateChange>RemoteDisconnect</StateChange>
+    </SessionStateChangeTrigger>
   </Triggers>
   <Principals>
     <Principal id="Author">
@@ -40,8 +59,12 @@
   </Settings>
   <Actions Context="Author">
     <Exec>
-      <Command>powershell.exe</Command>
-      <Arguments>-ExecutionPolicy Bypass -NoLogo -WindowStyle Hidden -command "Disable-PnpDevice -InstanceId 'HID\MSHW1003&amp;COL01\3&amp;210688DB&amp;0&amp;0000' -Confirm:$false;Enable-PnpDevice -InstanceId 'HID\MSHW1003&amp;COL01\3&amp;210688DB&amp;0&amp;0000' -Confirm:$false"</Arguments>
+      <Command>\Windows\OEM\devcon.exe</Command>
+      <Arguments>disable *MSHW1003*</Arguments>
+    </Exec>
+    <Exec>
+      <Command>\Windows\OEM\devcon.exe</Command>
+      <Arguments>enable *MSHW1003*</Arguments>
     </Exec>
   </Actions>
 </Task>
