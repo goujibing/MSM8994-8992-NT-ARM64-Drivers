@@ -15,21 +15,16 @@
         </SynchronousCommand>
         <SynchronousCommand action="add">
           <Order>3</Order>
-          <CommandLine>\Windows\OEM\devcon.exe disable *MSHW1003*</CommandLine>
+          <CommandLine>\Windows\OEM\devcon.exe restart ACPI\MSHW1003</CommandLine>
           <Description>Touch care </Description>
         </SynchronousCommand>
         <SynchronousCommand action="add">
           <Order>4</Order>
-          <CommandLine>\Windows\OEM\devcon.exe enable *MSHW1003*</CommandLine>
-          <Description>Touch care </Description>
-        </SynchronousCommand>
-        <SynchronousCommand action="add">
-          <Order>5</Order>
           <CommandLine>\Windows\OEM\devcon.exe install \Windows\OEM\oempanel.inf ACPI\MSHW1004</CommandLine>
           <Description>OemPanel </Description>
         </SynchronousCommand>
         <SynchronousCommand action="add">
-          <Order>6</Order>
+          <Order>5</Order>
           <CommandLine>\Windows\OEM\devcon.exe update \Windows\OEM\ChargeArbitration.inf Root\CAD</CommandLine>
           <Description>CAD </Description>
         </SynchronousCommand>

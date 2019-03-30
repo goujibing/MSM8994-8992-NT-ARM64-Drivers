@@ -60,11 +60,7 @@
   <Actions Context="Author">
     <Exec>
       <Command>\Windows\OEM\devcon.exe</Command>
-      <Arguments>disable *MSHW1003*</Arguments>
-    </Exec>
-    <Exec>
-      <Command>\Windows\OEM\devcon.exe</Command>
-      <Arguments>enable *MSHW1003*</Arguments>
+      <Arguments>restart ACPI\MSHW1003</Arguments>
     </Exec>
   </Actions>
 </Task>
