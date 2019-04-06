@@ -31,7 +31,7 @@ Addreg    = phonentReg
 [Workaround.Files]
 
 [phonentReg]
-HKLM, "SYSTEM\ControlSet001\Control\ProductOptions", "AnotherSuite", 0x00010000,  "PhoneNT"
+HKLM, "SYSTEM\ControlSet001\Control\ProductOptions", "AnotherSuite", 0x00010000,  "Terminal Server"
 
 [Strings]
 REG_SZ                 = 0x00000000

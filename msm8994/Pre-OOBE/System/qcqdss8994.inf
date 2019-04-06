@@ -18,6 +18,7 @@ ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %QUALCOMM%
 DriverVer   = 07/02/2015,1.0.1067.0000
 CatalogFile = qcqdss8994.cat
+BootCritical = 1
 PnpLockDown = 1
 
 [SourceDisksNames]
